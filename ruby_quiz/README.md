@@ -30,5 +30,4 @@ The concept of the challenge is this:
 	Decryption works in a very similar manner but backwards.
 		Its fairly simple if you take it step by step.
 
-The code I have written so far is my first attempt. Attempting to
-put this rubyquiz in a repo with other quizzes.
+The code I have written so far is my first attempt.
