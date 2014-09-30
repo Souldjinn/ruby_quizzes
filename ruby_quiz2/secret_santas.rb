@@ -9,14 +9,21 @@ end
 
 def link_to_secret_santa participants
   full_list = participants.clone
+  secondary_list = participants.clone
   completed_list = []
 
   full_list.each do |participant|
-    until participant[1] != participants[0][1]
-      p participants.count
-      participants = participants.shuffle
+    until participant[1] != secondary_list[0][1]
+      p secondary_list.count
+      secondary_list = secondary_list.shuffle
+      break if secondary_list.count == 1
     end
-    completed_list << participants.shift
+    completed_list << secondary_list.shift
+  end
+
+  if secondary_list.count == 1
+    puts participants
+    return link_to_secret_santa participants
   end
 
   return completed_list
